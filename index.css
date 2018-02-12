@@ -1,27 +1,12 @@
-body {
-	text-align: center;
-	background-color: #5555ff;
-}
-
-#topTitle {
-	width: 80vw;
-	font-size : 3em;
-	color: #ffffff;
-	background-color: #525252;
-	margin: auto;
+#screenStart {
+	text-align:center;
 }
 
 #titleImage {
-	width: 80vw;
+	width: 50vh;
+	margin-top: 15vh;
 }
 
-.navigation {
-	width: 60vw;
-	font-size: 2em;
-	background-color: #3333bb;
-	color: #ffffff;
-}
-
-.hidden {
-	display: none;
+#screenStart-button {
+	margin-top: 15vh;
 }

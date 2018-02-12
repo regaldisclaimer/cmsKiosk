@@ -1,0 +1,14 @@
+{
+  "name": "cmskiosk",
+  "version": "1.0.0",
+  "description": "Contact info@valuace.com for more information",
+  "main": "index.html",
+  "scripts": {
+    "test": ""
+  },
+  "author": "Valuace LLC",
+  "license": "All Rights Reserved",
+  "dependencies": {
+    "material-components-web": "^0.30.0"
+  }
+}

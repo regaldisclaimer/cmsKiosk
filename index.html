@@ -1,12 +1,19 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="index.css">
+		<link rel="stylesheet" type="text/css" href="node_modules/material-components-web/dist/material-components-web.css">
 	</head>
 	<body>
 		<div id="screenStart">
-			<p id="topTitle">수군임명장</p>
+			<header class="mdc-toolbar">
+				<div class="mdc-toolbar__row">
+					<section class="mdc-toolbar__section mdc-toolbar__section--align-center">
+						<span class="mdc-toolbar__title">수군임명장</span>
+					</section>
+				</div>
+			</header>
 			<img id="titleImage" src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Hwacha2.jpg"></img>
-			<p><button class="navigation" onclick="navBegin()">시작하기</button></p>
+			<p><button id="screenStart-button" class="mdc-button mdc-button--raised" onclick="navBegin()">시작하기</button></p>
 		</div>
 		<div id="screenWebcam" class="hidden">
 			<video autoplay></video>
@@ -14,6 +21,5 @@
 		<div id="screenName" class="hidden"></div>
 		<div id="screenPrint" class="hidden"></div>
 	</body>
-	<script src="jqueryMin.js"></script>
 	<script src="index.js"></script>
 </html>
