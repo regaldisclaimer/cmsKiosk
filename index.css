@@ -1,5 +1,9 @@
 #screenStart {
-	text-align:center;
+	text-align: center;
+}
+
+#screenWebcam {
+	text-align: center;
 }
 
 #titleImage {
@@ -9,4 +13,8 @@
 
 #screenStart-button {
 	margin-top: 15vh;
+}
+
+.hidden {
+	display: none;
 }

@@ -33,17 +33,39 @@ var navBegin = function () {
 };
 
 var navSnap = function () {
+	//TODO: capture an image and compress
 
+	//hide webcamscreen
+	screenWebcamEl.classList.toggle('hidden');
+
+	//show namescreen
+	screenNameEl.classList.toggle('hidden');
+
+	//TODO: show keyboard
 };
 
 var navSubmit = function () {
+	
+	//TODO: grab name
 
+	//hide namescreen
+	screenNameEl.classList.toggle('hidden');
+	//show print screen
+	screenPrintEl.classList.toggle('hidden');
+	//TODO: populate fields
 };
 
 var navPrint = function () {
+
+	//TODO: temporarily disable print button
+
+	//TODO: print
+
+	//TODO: submit info to the cloud
 
 };
 
 var navEnd = function () {
 
+	//TODO: reset
 };
