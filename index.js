@@ -58,10 +58,15 @@ var navSubmit = function () {
 var navPrint = function () {
 
 	//TODO: temporarily disable print button
-
-	//TODO: print
+	
+	//TODO: show wait/todo button
 
 	//TODO: submit info to the cloud
+
+	//TODO: print with QR if cloud response receieved
+
+	//TODO: print with internet error message if cloud response not received
+
 
 };
 
