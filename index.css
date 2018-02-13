@@ -1,3 +1,7 @@
+:root {
+	--mdc-theme-primary: #2196F3;
+}
+
 #screenStart {
 	text-align: center;
 }
@@ -6,9 +10,18 @@
 	text-align: center;
 }
 
+#screenName {
+	text-align: center;
+}
+
 #titleImage {
 	width: 50vh;
 	margin-top: 15vh;
+}
+
+#snapPreview {
+	width: 25vh;
+	margin-top: 5vh;
 }
 
 #screenStart-button {

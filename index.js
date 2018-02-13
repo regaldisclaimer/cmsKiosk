@@ -30,6 +30,8 @@ var navBegin = function () {
 	});
 	//turn on webcam screen
 	screenWebcamEl.classList.toggle('hidden');
+	//init MDC
+	window.mdc.autoInit(screenWebcamEl);
 };
 
 var navSnap = function () {
@@ -40,8 +42,34 @@ var navSnap = function () {
 
 	//show namescreen
 	screenNameEl.classList.toggle('hidden');
-
-	//TODO: show keyboard
+	//init MDC
+	window.mdc.autoInit(screenNameEl);
+	
+	//show keyboard
+	$('#keybard').keyboard({
+		display: {
+			'meta1' : '한/영',
+			'bksp' : '\u2190'
+		},
+		layout: "custom",
+		customLayout: {
+			'normal': [
+				'ㅂ ㅈ ㄷ ㄱ ㅅ ㅛ ㅕ ㅑ ㅐ ㅔ {bksp}',
+				'ㅁ ㄴ ㅇ ㄹ ㅎ ㅗ ㅓ ㅏ ㅣ',
+				'{shift} ㅋ ㅌ ㅊ ㅍ ㅠ ㅜ ㅡ {meta1}'
+			],
+			'shift': [
+				'ㅃ ㅉ ㄸ ㄲ ㅆ ㅛ ㅕ ㅑ ㅒ ㅖ {bksp}',
+				'ㅁ ㄴ ㅇ ㄹ ㅎ ㅗ ㅓ ㅏ ㅣ',
+				'{shift} ㅋ ㅌ ㅊ ㅍ ㅠ ㅜ ㅡ {meta1}'
+			],
+			'meta1': [
+				'Q W E R T Y U I O P {bksp}',
+				'A S D F G H J K K L',
+				'Z X C V B N M {meta1}'
+			]
+		}
+	})
 };
 
 var navSubmit = function () {
@@ -52,6 +80,8 @@ var navSubmit = function () {
 	screenNameEl.classList.toggle('hidden');
 	//show print screen
 	screenPrintEl.classList.toggle('hidden');
+	//init MDC
+	window.mdc.autoInit(screenPrintEl);
 	//TODO: populate fields
 };
 
@@ -73,4 +103,9 @@ var navPrint = function () {
 var navEnd = function () {
 
 	//TODO: reset
+	//NB: consider implementing a bool check to see if MDC needs initiating
+
 };
+
+//init MDC JS on the starting page
+window.mdc.autoInit(screenStartEl);
