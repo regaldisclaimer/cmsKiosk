@@ -46,30 +46,34 @@ var navSnap = function () {
 	window.mdc.autoInit(screenNameEl);
 	
 	//show keyboard
-	$('#keybard').keyboard({
+	$('#nameInput').keyboard({
 		display: {
-			'meta1' : '한/영',
-			'bksp' : '\u2190'
+			'bksp': '\u2190',
+			'shift': '\u21E7 Shift',
+			'accept': '확인/다음',
 		},
 		layout: "custom",
 		customLayout: {
 			'normal': [
 				'ㅂ ㅈ ㄷ ㄱ ㅅ ㅛ ㅕ ㅑ ㅐ ㅔ {bksp}',
-				'ㅁ ㄴ ㅇ ㄹ ㅎ ㅗ ㅓ ㅏ ㅣ',
-				'{shift} ㅋ ㅌ ㅊ ㅍ ㅠ ㅜ ㅡ {meta1}'
+				'ㅁ ㄴ ㅇ ㄹ ㅎ ㅗ ㅓ ㅏ ㅣ {shift}',
+				'ㅋ ㅌ ㅊ ㅍ ㅠ ㅜ ㅡ {accept}',
 			],
 			'shift': [
 				'ㅃ ㅉ ㄸ ㄲ ㅆ ㅛ ㅕ ㅑ ㅒ ㅖ {bksp}',
-				'ㅁ ㄴ ㅇ ㄹ ㅎ ㅗ ㅓ ㅏ ㅣ',
-				'{shift} ㅋ ㅌ ㅊ ㅍ ㅠ ㅜ ㅡ {meta1}'
-			],
-			'meta1': [
-				'Q W E R T Y U I O P {bksp}',
-				'A S D F G H J K K L',
-				'Z X C V B N M {meta1}'
+				'ㅁ ㄴ ㅇ ㄹ ㅎ ㅗ ㅓ ㅏ ㅣ {shift}',
+				'ㅋ ㅌ ㅊ ㅍ ㅠ ㅜ ㅡ {accept}',
 			]
-		}
-	})
+		},
+		usePreview: false,
+		alwaysOpen: true,
+		stayOpen: true,
+		accepted: function() {
+			navSubmit();
+		},
+	});
+
+	
 };
 
 var navSubmit = function () {

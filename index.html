@@ -1,6 +1,7 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="node_modules/material-components-web/dist/material-components-web.css">
+		<link rel="stylesheet" type="text/css" href="node_modules/virtual-keyboard/dist/css/keyboard-basic.min.css">
 		<link rel="stylesheet" type="text/css" href="index.css">
 	</head>
 	<body>
@@ -44,8 +45,6 @@
 				<label class="mdc-text-field__label" for="nameInput">이름</label>
 				<div class="mdc-line-ripple"></div>
 			</div>
-			<div id="keyboard"></div>
-			<p><button id="nameSubmit" class="mdc-button mdc-button--raised" onclick="navSubmit()" data-mdc-auto-init="MDCRipple">다음</button></p>
 		</div>
 
 		<div id="screenPrint" class="hidden">
@@ -53,6 +52,7 @@
 		</div>
 		<script src="jqueryMin.js"></script>
 		<script src="node_modules/material-components-web/dist/material-components-web.js"></script>
+		<script src="node_modules/virtual-keyboard/dist/js/jquery.keyboard.js"></script>
 		<script src="index.js"></script>
 	</body>
 </html>

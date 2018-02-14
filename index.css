@@ -31,3 +31,13 @@
 .hidden {
 	display: none;
 }
+
+div#nameInput_keyboard.ui-keyboard.ui-widget-content.ui-widget.ui-corner-all.ui-helper-clearfix.ui-keyboard-always-open.ui-keyboard-has-focus div.ui-keyboard-keyset.ui-keyboard-keyset-normal button.ui-keyboard-button.ui-keyboard-actionkey.ui-keyboard-accept.ui-keyboard-widekey.ui-state-default.ui-corner-all.ui-state-active {
+	min-width: 9em;
+	background-image: linear-gradient(-90deg, rgb(105, 182, 245) 0, #2196F3 100%)
+}
+
+div#nameInput_keyboard.ui-keyboard.ui-widget-content.ui-widget.ui-corner-all.ui-helper-clearfix.ui-keyboard-always-open.ui-keyboard-has-focus div.ui-keyboard-keyset.ui-keyboard-keyset-normal button.ui-keyboard-button.ui-keyboard-actionkey.ui-keyboard-accept.ui-keyboard-widekey.ui-state-default.ui-corner-all.ui-state-active:hover {
+	min-width: 9em;
+	background-image: linear-gradient(-90deg, rgb(39, 151, 243) 0, rgb(27, 117, 190) 100%)
+}
