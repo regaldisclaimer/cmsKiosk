@@ -21,7 +21,8 @@
 
 #snapPreview {
 	width: 25vh;
-	margin-top: 5vh;
+	margin-top: 10vh;
+	margin-bottom: 10vh;
 }
 
 #screenStart-button {
@@ -34,6 +35,23 @@
 
 .invisible {
 	opacity: 0;
+}
+
+#webcamSubtitle {
+	margin-top: 5vh;
+}
+
+#webcamPlayback {
+	width: 50vh;
+	margin-top: 5vh;
+}
+
+#snap-button {
+	margin-top: 5vh;
+}
+
+#nameInputEnclosure {
+	margin-top: 10vh;
 }
 
 div#nameInput_keyboard.ui-keyboard.ui-widget-content.ui-widget.ui-corner-all.ui-helper-clearfix.ui-keyboard-always-open.ui-keyboard-has-focus div.ui-keyboard-keyset.ui-keyboard-keyset-normal button.ui-keyboard-button.ui-keyboard-actionkey.ui-keyboard-accept.ui-keyboard-widekey.ui-state-default.ui-corner-all.ui-state-active {

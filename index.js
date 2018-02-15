@@ -40,6 +40,7 @@ var navBegin = function () {
 };
 
 var processKeystroke = function() {
+
 	//clear the output
 	inputViewEl.value = "";	
 	//reset the hangul toggle
@@ -66,7 +67,6 @@ var processKeystroke = function() {
 };
 
 var user_commit = function(buf) {
-	console.log(buf);
 	if (buf[0] != 0 && buf[0]) {
 		inputViewEl.value += String.fromCharCode(buf[0]);
 	}
@@ -146,8 +146,15 @@ var setupKeyboard = function() {
 		alwaysOpen: true,
 		stayOpen: true,
 		accepted: function() {
-			//TODO: clear both buffers
-			navSubmit();
+			//check that the name isn't too long
+			if (inputViewEl.value.length > 6) {
+				alert("이름 길이 초과");
+			} else {
+				inputBuffer = "";
+				inputBufferEl.value = "";
+				inputViewEl.value = "";
+				navSubmit();
+			}
 		},
 		change: function() {
 			processKeystroke();
@@ -174,6 +181,8 @@ var navSnap = function () {
 var navSubmit = function () {
 	
 	//TODO: grab name
+
+	//TODO: hide keyboard
 
 	//hide namescreen
 	screenNameEl.classList.toggle('hidden');

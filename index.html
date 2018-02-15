@@ -25,8 +25,8 @@
 					</section>
 				</div>
 			</header>
-			<p>임명장에 넣을 사진을 찍습니다</p>
-			<video autoplay></video>
+			<p id="webcamSubtitle">임명장에 넣을 사진을 찍습니다</p>
+			<video autoplay id="webcamPlayback"></video>
 			<p><button id="snap-button" class="mdc-button mdc-button--raised" onclick="navSnap()" data-mdc-auto-init="MDCRipple">사진찍기</button></p>
 		</div>
 
@@ -40,16 +40,20 @@
 			</header>
 			<img id="snapPreview" src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Hwacha2.jpg"></img>
 			<p>임명장에 넣을 이름을 적어주세요</p>
-			<div class="mdc-text-field mdc-text-field--box" data-mdc-auto-init="MDCTextField">
-				<input type="text" class="mdc-text-field__input" id="nameDisplay"></input>
-				<label class="mdc-text-field__label" for="nameDisplay">이름</label>
-				<div class="mdc-line-ripple"></div>
-			</div>
-			<div class="mdc-text-field mdc-text-field--box invisible" data-mdc-auto-init="MDCTextField">
-				<input type="text" class="mdc-text-field__input" id="nameInput"></input>
-				<label class="mdc-text-field__label" for="nameInput">buffer</label>
-				<div class="mdc-line-ripple"></div>
-			</div>
+			<p id="nameInputEnclosure">
+				<div class="mdc-text-field mdc-text-field--box" data-mdc-auto-init="MDCTextField">
+					<input type="text" class="mdc-text-field__input" id="nameDisplay"></input>
+					<label class="mdc-text-field__label mdc-text-field__label--float-above" for="nameDisplay">이름</label>
+					<div class="mdc-line-ripple"></div>
+				</div>
+			</p>
+			<p>
+				<div class="mdc-text-field mdc-text-field--box invisible" data-mdc-auto-init="MDCTextField">
+					<input type="text" class="mdc-text-field__input" id="nameInput"></input>
+					<label class="mdc-text-field__label" for="nameInput">buffer</label>
+					<div class="mdc-line-ripple"></div>
+				</div>
+			</p>
 		</div>
 
 		<div id="screenPrint" class="hidden">

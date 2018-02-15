@@ -1,0 +1,9 @@
+* when running from source: 
+
+* when deploying:
+
+-obtain minified distribution
+-install firefox
+-install disable webrtc overlay extension https://addons.mozilla.org/en-US/firefox/addon/disable-webrtc-overlay/
+-run index.html on firefox
+-f11 fullscreen
