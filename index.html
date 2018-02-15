@@ -57,7 +57,33 @@
 		</div>
 
 		<div id="screenPrint" class="hidden">
-
+			<header class="mdc-toolbar">
+				<div class="mdc-toolbar__row">
+					<section class="mdc-toolbar__section mdc-toolbar__section--align-center">
+						<span class="mdc-toolbar__title">수군임명장</span>
+					</section>
+				</div>
+			</header>
+			<img id="certImage" src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Hwacha2.jpg"></img>
+			<div id="certText">
+				<p>
+					<span id="certName"></span>는 수군체험을
+				</p>
+					성실히 임하였으므로
+				<p>
+					고려수군으로 임명한다
+				</p>
+			</div>
+			<!-- TODO: insert a floating card here for the paper and set the width/height ratio according to A4. place papaer elements within it relatively. -->
+			<div id="certSign">
+				<p>
+					영천군 수군통제사
+				</p>
+				<p>
+					아무개
+				</p>
+			</div>
+			<p><button id="printButton" class="mdc-button mdc-button--raised" onclick="navPrint()" data-mdc-auto-init="MDCRipple">출력하기</button></p>
 		</div>
 		<script src="jqueryMin.js"></script>
 		<script src="InputEngine/engine.js"></script>
