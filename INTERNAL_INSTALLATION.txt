@@ -1,4 +1,7 @@
 * when running from source: 
+-npm install
+-obtain https server and node server.js
+-open index.html within the corresponding directory (depends on the installation location of the https server)
 
 * when deploying:
 
