@@ -6,4 +6,5 @@
 -install firefox
 -install disable webrtc overlay extension https://addons.mozilla.org/en-US/firefox/addon/disable-webrtc-overlay/
 -run index.html on firefox
+-add exception for the SSL
 -f11 fullscreen

@@ -54,21 +54,37 @@
 	margin-top: 10vh;
 }
 
-#certImage {
-	width: 15vh;
+#certCard {
+	height: 891px;
+	width: 630px;
+	margin: auto;
 	margin-top: 5vh;
+	text-align: center;
+}
+
+#certImage {
+	width: 150px;
+	margin-top: 100px;
+	margin-left: 100px;
 }
 
 #certText {
-	text-align: justified;
-	font-size: 2em;
-	margin-top: 10vh;
+	text-align: justify;
+	font-size: 24px;;
+	margin-top: 100px;
+	margin-left: 100px;
+	margin-right: 100px;
 }
 
 #certSign {
-	font-size: 1.5em;
+	font-size: 16px;;
 	text-align: right;
-	margin-top: 10vh;
+	margin-top: 100px;
+	margin-right: 100px;
+}
+
+#printButton {
+	margin-left: 70vw;
 }
 
 div#nameInput_keyboard.ui-keyboard.ui-widget-content.ui-widget.ui-corner-all.ui-helper-clearfix.ui-keyboard-always-open.ui-keyboard-has-focus div.ui-keyboard-keyset.ui-keyboard-keyset-normal button.ui-keyboard-button.ui-keyboard-actionkey.ui-keyboard-accept.ui-keyboard-widekey.ui-state-default.ui-corner-all.ui-state-active {

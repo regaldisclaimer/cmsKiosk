@@ -6,7 +6,10 @@ var screenPrintEl = document.querySelector("#screenPrint");
 var inputBufferEl = document.querySelector("#nameInput");
 var inputViewEl = document.querySelector("#nameDisplay");
 
+var certNameEl = document.querySelector("#certName");
+
 var inputBuffer = "";
+var chosenName = "";
 
 //check webcam
 if (!!(
@@ -150,10 +153,8 @@ var setupKeyboard = function() {
 			if (inputViewEl.value.length > 6) {
 				alert("이름 길이 초과");
 			} else {
-				inputBuffer = "";
-				inputBufferEl.value = "";
-				inputViewEl.value = "";
 				navSubmit();
+				document.querySelector('#nameInput_keyboard').classList.toggle('hidden');
 			}
 		},
 		change: function() {
@@ -181,9 +182,7 @@ var navSnap = function () {
 var navSubmit = function () {
 	
 	//TODO: grab name
-
-	//TODO: hide keyboard
-
+	chosenName = inputViewEl.value;
 	//hide namescreen
 	screenNameEl.classList.toggle('hidden');
 	//show print screen
@@ -191,6 +190,7 @@ var navSubmit = function () {
 	//init MDC
 	window.mdc.autoInit(screenPrintEl);
 	//TODO: populate fields
+	certNameEl.innerHTML = chosenName;
 };
 
 var navPrint = function () {
@@ -212,6 +212,11 @@ var navEnd = function () {
 
 	//TODO: reset
 	//NB: consider implementing a bool check to see if MDC needs initiating
+
+	//clear buffers for the next run
+	inputBuffer = "";
+	inputBufferEl.value = "";
+	inputViewEl.value = "";
 
 };
 

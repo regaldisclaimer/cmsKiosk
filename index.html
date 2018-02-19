@@ -1,5 +1,6 @@
-<html>
+<html lang="ko">
 	<head>
+		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="node_modules/material-components-web/dist/material-components-web.css">
 		<link rel="stylesheet" type="text/css" href="node_modules/virtual-keyboard/dist/css/keyboard-basic.min.css">
 		<link rel="stylesheet" type="text/css" href="index.css">
@@ -64,26 +65,32 @@
 					</section>
 				</div>
 			</header>
-			<img id="certImage" src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Hwacha2.jpg"></img>
-			<div id="certText">
-				<p>
-					<span id="certName"></span>는 수군체험을
-				</p>
-					성실히 임하였으므로
-				<p>
-					고려수군으로 임명한다
-				</p>
-			</div>
-			<!-- TODO: insert a floating card here for the paper and set the width/height ratio according to A4. place papaer elements within it relatively. -->
-			<div id="certSign">
-				<p>
-					영천군 수군통제사
-				</p>
-				<p>
-					아무개
-				</p>
+			<div id="certCard" class="mdc-card">
+				<img id="certImage" src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Hwacha2.jpg"></img>
+				<div id="certText">
+					<p>
+						<span id="certName"></span>은/는 수군체험을
+					</p>
+					<p>
+						성실히 임하였으므로
+					</p>
+					<p>
+						고려수군으로 임명한다
+					</p>
+				</div>
+
+				<div id="certSign">
+					<p>
+						영천군 수군통제사
+					</p>
+					<p>
+						아무개
+					</p>
+				</div>
 			</div>
 			<p><button id="printButton" class="mdc-button mdc-button--raised" onclick="navPrint()" data-mdc-auto-init="MDCRipple">출력하기</button></p>
+			<!-- show a dialogue and choose between print and done -->
+			<p><button id="resetButton" class="mdc-button mdc-button--raised" onclick="navEnd()" data-mdc-auto-init="MDCRipple">마치기</button></p>
 		</div>
 		<script src="jqueryMin.js"></script>
 		<script src="InputEngine/engine.js"></script>
