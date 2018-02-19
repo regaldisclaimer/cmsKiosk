@@ -8,6 +8,8 @@ var inputViewEl = document.querySelector("#nameDisplay");
 
 var certNameEl = document.querySelector("#certName");
 
+var printButtonEl = document.querySelector("#printButton");
+
 var inputBuffer = "";
 var chosenName = "";
 
@@ -181,7 +183,7 @@ var navSnap = function () {
 
 var navSubmit = function () {
 	
-	//TODO: grab name
+	//grab name
 	chosenName = inputViewEl.value;
 	//hide namescreen
 	screenNameEl.classList.toggle('hidden');
@@ -189,18 +191,24 @@ var navSubmit = function () {
 	screenPrintEl.classList.toggle('hidden');
 	//init MDC
 	window.mdc.autoInit(screenPrintEl);
-	//TODO: populate fields
+	//populate fields
 	certNameEl.innerHTML = chosenName;
 };
+
+var showDialog = function() {
+	console.log("dialog");
+}
 
 var navPrint = function () {
 
 	//TODO: temporarily disable print button
-	
+	printButtonEl.setAttribute("disabled", "");
 	//TODO: show wait/todo button
-
+	printButtonEl.innerHTML = "출력중...";
+	//TODO: start timer to show dialog
+	setTimeout(showDialog, 3000);
 	//TODO: submit info to the cloud
-
+	
 	//TODO: print with QR if cloud response receieved
 
 	//TODO: print with internet error message if cloud response not received
@@ -212,7 +220,10 @@ var navEnd = function () {
 
 	//TODO: reset
 	//NB: consider implementing a bool check to see if MDC needs initiating
-
+	
+	//reset print button
+	printButtonEl.removeAttribute("disabled");
+	printButtonEl.innerHTML = "출력하기";
 	//clear buffers for the next run
 	inputBuffer = "";
 	inputBufferEl.value = "";
