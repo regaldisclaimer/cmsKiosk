@@ -1,0 +1,14 @@
+{
+  "name": "cmskiosk",
+  "version": "1.0.0",
+  "description": "distribution",
+  "main": "index.html",
+  "scripts": {
+    "test": ""
+  },
+  "license": "All Rights Reserved",
+  "dependencies": {
+    "material-components-web": "0.30.0",
+    "virtual-keyboard": "1.27.4"
+  }
+}

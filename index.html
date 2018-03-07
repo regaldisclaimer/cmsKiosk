@@ -1,5 +1,122 @@
-<html>
-<body>
-SSL Test
-</body>
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="material-components-web.css">
+		<link rel="stylesheet" type="text/css" href="keyboard-basic.min.css">
+		<link rel="stylesheet" type="text/css" href="index.css">
+	</head>
+	<body>
+		<header class="mdc-toolbar mdc-toolbar--fixed">
+			<div class="mdc-toolbar__row">
+				<section class="mdc-toolbar__section mdc-toolbar__section--align-center">
+					<span class="mdc-toolbar__title">수군임명장</span>
+				</section>
+			</div>
+		</header>
+
+		<div id="screenStart">
+			<img id="titleImage" src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Hwacha2.jpg"></img>
+			<p><button id="screenStart-button" class="mdc-button mdc-button--raised mdc-button-custom-large" onclick="navBegin()" data-mdc-auto-init="MDCRipple">시작하기</button></p>
+		</div>
+
+		<div id="screenWebcam" class="hidden">
+			<p id="webcamSubtitle">임명장에 넣을 사진을 찍습니다</p>
+			<video autoplay id="webcamPlayback"></video>
+			<p><button id="snap-button" class="mdc-button mdc-button--raised mdc-button-custom-large" onclick="navSnap()" data-mdc-auto-init="MDCRipple">사진찍기</button></p>
+		</div>
+
+		<aside id="snapDialog" class="mdc-dialog">
+			<div class="mdc-dialog__surface">
+				<header class="mdc-dialog__header">
+					<h2 id="my-mdc-dialog-label" class="mdc-dialog__header__title">
+						찍힌 사진이 마음에 드시나요?
+					</h2>
+				</header>
+				<section id="snapDialog-description" class="mdc-dialog__body">
+					<canvas id="captureCanvas"></canvas>
+					<img id="snapReview" alt="snap"></img>
+				</section>
+				<footer class="mdc-dialog__footer">
+					<button type="button" class="mdc-button mdc-button--raised mdc-button-custom-large mdc-dialog__footer__button mdc-dialog__footer__button--cancel" data-mdc-auto-init="MDCRipple">아니요(다시 찍기)</button>
+					<button type="button" class="mdc-button mdc-button--raised mdc-button-custom-large mdc-dialog__footer__button mdc-dialog__footer__button--accept" data-mdc-auto-init="MDCRipple">네(다음 화면으로)</button>
+				</footer>
+			</div>
+			<div class="mdc-dialog__backdrop"></div>
+		</aside>
+
+		<div id="screenName" class="hidden">
+			<img id="snapPreview" src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Hwacha2.jpg"></img>
+			<p>임명장에 넣을 이름을 적어주세요</p>
+			<p id="nameInputEnclosure">
+				<div class="mdc-text-field mdc-text-field--box" data-mdc-auto-init="MDCTextField">
+					<input type="text" class="mdc-text-field__input mdc-text-field-custom-tall" id="nameDisplay"></input>
+					<label class="mdc-text-field__label mdc-text-field__label--float-above" for="nameDisplay">이름</label>
+					<div class="mdc-line-ripple"></div>
+				</div>
+			</p>
+			<p>
+				<div class="mdc-text-field mdc-text-field--box invisible" data-mdc-auto-init="MDCTextField">
+					<input type="text" class="mdc-text-field__input" id="nameInput"></input>
+					<label class="mdc-text-field__label" for="nameInput">buffer</label>
+					<div class="mdc-line-ripple"></div>
+				</div>
+			</p>
+		</div>
+
+		<div id="screenPrint" class="hidden">
+			<div id="certCard" class="mdc-card">
+				<img id="certImage" src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Hwacha2.jpg"></img>
+				<div id="certText">
+					<p>
+						<b><span id="certName"></span></b> 은/는 수군체험을
+					</p>
+					<p>
+						성실히 임하였으므로
+					</p>
+					<p>
+						고려수군으로 임명한다
+					</p>
+				</div>
+
+				<div id="certSign">
+					<p>
+						영천군 수군통제사
+					</p>
+					<p>
+						아무개
+					</p>
+				</div>
+			</div>
+			<p><button id="printButton" class="mdc-button mdc-button--raised mdc-button-custom-large" onclick="navPrint()" data-mdc-auto-init="MDCRipple">출력하기</button></p>
+			<!-- show a dialogue and choose between print and done -->
+			<!-- <p><button id="resetButton" class="mdc-button mdc-button--raised" onclick="navEnd()" data-mdc-auto-init="MDCRipple">마치기</button></p> -->
+		</div>
+
+		<aside id="printDialog" class="mdc-dialog">
+			<div class="mdc-dialog__surface">
+				<header class="mdc-dialog__header">
+					<h2 id="my-mdc-dialog-label" class="mdc-dialog__header__title">
+						임명장 출력확인
+					</h2>
+				</header>
+				<section id="printDialog-description" class="mdc-dialog__body">
+					임명장이 출력되었나요?
+				</section>
+				<footer class="mdc-dialog__footer">
+					<button type="button" class="mdc-button mdc-button--raised mdc-button-custom-large mdc-dialog__footer__button mdc-dialog__footer__button--cancel"
+					 data-mdc-auto-init="MDCRipple">아니요(다시 출력)</button>
+					<button type="button" class="mdc-button mdc-button--raised mdc-button-custom-large mdc-dialog__footer__button mdc-dialog__footer__button--accept"
+					 data-mdc-auto-init="MDCRipple">네(마치기)</button>
+				</footer>
+			</div>
+			<div class="mdc-dialog__backdrop"></div>
+		</aside>
+
+		<script src="jqueryMin.js"></script>
+		<script src="InputEngine/engine.js"></script>
+		<script src="material-components-web.js"></script>
+		<script src="jquery.keyboard.js"></script>
+		<script src="obf.js"></script>
+	</body>
 </html>
